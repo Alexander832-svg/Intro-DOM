@@ -3,6 +3,7 @@ console.log("Script Started");
 //Variable to track the number of clicks
 let clicks = 0;
 
+//Set the value of one click
 let clickValue = 1;
 
 //Variable to track the number of levels
@@ -32,12 +33,17 @@ function handleClick() {
 
     //Check if have 10 cliks, ande if is level one or two
     if (clicks == 10) {
-        alert("pop-up alert!");
+        alert("Congratulations! You have reached 10 clicks and advanced to level 2!");
     }
-    else if (clicks >=9) {
+     if (clicks >= 10) {
+        clickValue = 2;
         levelDisplay.innerText = "Level: 2";
     }
-    else if (clicks >= 10) {
-        clickValue = 2;
+    if (clicks == 50) {
+        alert("Congratulations! You have reached 50 clicks and advanced to level 3!");
     }
-}
+     if (clicks >= 50) {
+        levelDisplay.innerText = "Level: 3";
+        clickValue = 5;
+    }
+} 
